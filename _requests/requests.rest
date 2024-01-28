@@ -1,0 +1,80 @@
+### Everything that has something to do with the USER
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "First_Name" : "grZeSiek",
+  "Last_Name" : "Parobek",
+  "Email": "seVenTHTest@mail.com",
+  "Password": "password"
+}
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "Email": "fourthTest@mail.com",
+  "Password": "password"
+}
+###
+DELETE http://localhost:3000/logout
+Content-Type: application/json
+###
+
+### Everything that has something to do with the PRODUCT
+GET http://localhost:3000/getByEan
+Content-Type: application/json
+
+{
+  "EAN" : "3 600523 997626"
+}
+###
+
+GET http://localhost:3000/getByInput
+Content-Type: application/json
+
+{
+  "inputValue" : "%twarzy%"
+}
+###
+
+### Everything that has something to do with the REVIEW
+POST http://localhost:3000/postReview
+Content-Type: application/json
+
+{
+  "User_ID" : "33",
+  "Product_ID": "123",
+  "Rating": "5",
+  "Content": "Bardzo dobry produkt polecam 10/10"
+}
+### 
+
+GET http://localhost:3000/getReviewByProduct
+Content-Type: application/json
+
+{
+  "Product_ID": "123"
+}
+###
+
+### 
+
+GET http://localhost:3000/getReviewByUser
+Content-Type: application/json
+
+{
+  "User_ID": "33",
+  "Product_ID" : "123"
+}
+
+###
+DELETE http://localhost:3000/deleteReview
+Content-Type: application/json
+
+{
+  "User_ID": "33",
+  "Product_ID" : "123"
+}
+###
